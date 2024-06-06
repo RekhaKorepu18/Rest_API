@@ -146,7 +146,7 @@ app.delete('/providers/:id', (req, res) => {
     }
 });
 //=======================####Task-3######=================================
-app.put('/subscribeToProvider/:id' , (req: Request, res: Response) => {
+app.put('/Providersubscription/:id' , (req: Request, res: Response) => {
     const userid= req.params.id;
     const providerId = req.body.provider;
     //console.log(providerId);
@@ -218,7 +218,7 @@ app.get('/meters/:id/readings', (req: Request, res: Response) =>{
 });
 //============#########=======Task-5========$$$$$$$$$$========================================================================
 
-app.put('/providers/assignMeter/:id', (req: Request, res: Response) => {
+app.put('/Metersubscription/:id', (req: Request, res: Response) => {
     const userid= req.params.id;
     const meterId = req.body.meterId;
     //console.log(providerId);
@@ -242,7 +242,7 @@ app.put('/providers/assignMeter/:id', (req: Request, res: Response) => {
    res.json(users);
 });
 
-app.get('/users/:id/getreadings', (req: Request, res: Response) => {
+app.get('/users/:id/readings', (req: Request, res: Response) => {
     const userid= req.params.id;
     console.log(userid);
     const userIndex= users.findIndex((item) => item.id === userid);
@@ -257,7 +257,7 @@ app.get('/users/:id/getreadings', (req: Request, res: Response) => {
     console.log("readings retrieved succesfully");
 });
 
-app.get('/users/gettotalbill/:id', (req: Request, res: Response)=> {
+app.get('/users/totalbill/:id', (req: Request, res: Response)=> {
     const userid= req.params.id;
     console.log(userid);
     const userIndex= users.findIndex((item) => item.id === userid);
